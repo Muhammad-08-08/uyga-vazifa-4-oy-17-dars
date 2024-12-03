@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
   const blackWhite = document.querySelector(".black-white");
   const card1 = document.querySelector(".card1");
+  const input = document.querySelector(".input");
 
   darkMoon.addEventListener("click", () => {
     blackWhite.classList.toggle("black-white-right");
     container.classList.toggle("moon");
     card1.classList.toggle("moon");
+    input.classList.toggle("moon-input");
   });
 
   setInterval(() => {
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let month = document.querySelector(".month");
   let kun = document.querySelector(".kun");
 
-  const weekDays = ["Yakshanba", "Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba"];
+  const weekDays = ["Yakshanba,", "Dushanba,", "Seshanba,", "Chorshanba,", "Payshanba,", "Juma,", "Shanba,"];
   day.innerHTML = weekDays[new Date().getDay()];
 
   kun.innerHTML = new Date().getDate().toString().padStart(2, "0");
@@ -33,4 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "iyul", "avgust", "sentabr", "oktabr", "noyabr", "dekabr"
   ];
   month.innerHTML = months[new Date().getMonth()];
+
+  let apiKey = ""
 });
